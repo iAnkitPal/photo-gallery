@@ -28,6 +28,8 @@ export class PhotoService {
 
     this.savedImageFile = await this.savePicture(capturedPhoto);
     this.photos.unshift(this.savedImageFile);
+    console.log('*^*&^1',this.PHOTO_STORAGE);
+    console.log('*^*&^2',this.photos);
     Preferences.set({
       key: this.PHOTO_STORAGE,
       value: JSON.stringify(this.photos),
